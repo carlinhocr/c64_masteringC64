@@ -32,33 +32,33 @@
 320 rem syntax is poke (base number) + register 21, value
 330 poke v + 21,4
 340 rem step 5 -------------
-345 rem clear the screen
+350 rem clear the screen
 360 print "{clear}"
-365 rem step 6 -------------
-345 rem set border and background color to black color #0
-355 poke 53280,0
-362 poke 53281,0
-370 rem step 7 -------------
-380 rem change the sprite colour
-390 rem register are v+39 to v+46 for sprites 0 to 7
-400 rem we will use register 41 for sprite 2
-410 rem we will use the commodore red color number 2
-420 poke v + 41,2
-430 rem step 8 -------------
-440 rem set the y coordinate register 5
-445 poke v + 5, 200
-450 rem step 9 -------------
-440 rem set the x coordinate register 4
-450 poke v + 4, 100
-
-
-
-900 rem sprite data line by line 3 bytes for 21 lines
-910 rem each sprite is 24 columns by 21 rows
-920 rem so 21 rows of 3 bytes
-930 rem each row is:
-940 rem 128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1
-950 rem add the number if the sprite pixel is on
+370 rem step 6 -------------
+380 rem set border and background color to black color #0
+390 poke 53280,0
+400 poke 53281,0
+410 rem step 7 -------------
+420 rem change the sprite colour
+430 rem register are v+39 to v+46 for sprites 0 to 7
+440 rem we will use register 41 for sprite 2
+450 rem we will use the commodore red color number 2
+460 poke v + 41,2
+470 rem step 8 -------------
+480 rem set the y coordinate register 5
+490 poke v + 5, 200
+500 rem step 9 -------------
+510 rem set the x coordinate register 4
+520 poke v + 4, 100
+900 rem step 1 -------------
+910 rem data part of step 1
+920 rem sprite data line by line 3 bytes for 21 lines
+930 rem each sprite is 24 columns by 21 rows
+940 rem so 21 rows of 3 bytes
+950 rem each row is:
+960 rem 128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1
+970 rem add the number if the sprite pixel is one number if the sprite pixel is on
+1000 rem
 1010 DATA 3,0,192
 1020 DATA 3,129,192
 1030 DATA 3,231,192
@@ -80,5 +80,3 @@
 1190 DATA 0,255,0
 1200 DATA 0,126,0
 1210 DATA 0,24,0
-
-
