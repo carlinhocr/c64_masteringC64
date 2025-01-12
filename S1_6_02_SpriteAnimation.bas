@@ -45,11 +45,24 @@
 450 rem we will use the commodore red color number 2
 460 poke v + 41,2
 470 rem step 8 -------------
-480 rem set the y coordinate register 5
-490 poke v + 5, 200
-500 rem step 9 -------------
-510 rem set the x coordinate register 4
-520 poke v + 4, 100
+480 rem animate along x and y coordinates
+490 rem animate along  the y coordinate register 5
+500 for y = 200 to 60 step -1
+510 poke v + 5, y
+520 next y
+530 rem animate along the x set the x coordinate register 4
+540 for x = 40 to 255
+550 poke v + 4, x
+560 next x
+570 rem animate along  the y coordinate register 5
+580 for y = 60 to 200
+590 poke v + 5, y
+600 next y
+610 rem animate along the x set the x coordinate register 4
+620 for x = 255 to 40 step -1
+630 poke v + 4, x
+640 next x
+650 goto 490
 900 rem step 1 -------------
 910 rem data part of step 1
 920 rem sprite data line by line 3 bytes for 21 lines
@@ -57,7 +70,7 @@
 940 rem so 21 rows of 3 bytes
 950 rem each row is:
 960 rem 128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1
-970 rem add the number if the sprite pixel is one number if the sprite pixel is on
+970 rem add the number if the sprite pixel is one (on)
 1000 rem
 1010 DATA 3,0,192
 1020 DATA 3,129,192
