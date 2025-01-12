@@ -35,34 +35,35 @@
 350 rem clear the screen
 360 print "{clear}"
 370 rem step 6 -------------
-380 rem set border and background color to black color #0
-390 poke 53280,0
-400 poke 53281,0
-410 rem step 7 -------------
-420 rem change the sprite colour
-430 rem register are v+39 to v+46 for sprites 0 to 7
-440 rem we will use register 41 for sprite 2
-450 rem we will use the commodore red color number 2
-460 poke v + 41,2
-470 rem step 8 -------------
-480 rem animate along x and y coordinates
-490 rem animate along  the y coordinate register 5
-500 for y = 200 to 60 step -1
-510 poke v + 5, y
-520 next y
-530 rem animate along the x set the x coordinate register 4
-540 for x = 40 to 255
-550 poke v + 4, x
-560 next x
-570 rem animate along  the y coordinate register 5
-580 for y = 60 to 200
-590 poke v + 5, y
-600 next y
-610 rem animate along the x set the x coordinate register 4
-620 for x = 255 to 40 step -1
-630 poke v + 4, x
-640 next x
-650 goto 490
+380 rem set border light gray
+390 poke 53280,15
+400 rem and background color to black color #0
+410 poke 53281,0
+420 rem step 7 -------------
+430 rem change the sprite colour
+440 rem register are v+39 to v+46 for sprites 0 to 7
+450 rem we will use register 41 for sprite 2
+460 rem we will use the commodore red color number 2
+470 poke v + 41,2
+480 rem step 8 -------------
+490 rem animate along x and y coordinates
+500 rem animate along  the y coordinate register 5
+510 for y = 227 to 50 step -1
+520 poke v + 5, y
+530 next y
+540 rem animate along the x set the x coordinate register 4
+550 for x = 24 to 255
+560 poke v + 4, x
+570 next x
+580 rem animate along  the y coordinate register 5
+590 for y = 50 to 227
+600 poke v + 5, y
+610 next y
+620 rem animate along the x set the x coordinate register 4
+630 for x = 255 to 24 step -1
+640 poke v + 4, x
+650 next x
+660 goto 500
 900 rem step 1 -------------
 910 rem data part of step 1
 920 rem sprite data line by line 3 bytes for 21 lines
