@@ -48,6 +48,7 @@
         <FileName>S1_6_01_SpriteFirstProgram.bas</FileName>
         <FileName>S1_6_02_SpriteAnimation.bas</FileName>
         <FileName>S1_6_03_SpriteAllScreen.bas</FileName>
+        <FileName>S1_6_04_SpriteExpansion.bas</FileName>
     </BuildList>
     <DetermineBuildOrder>0</DetermineBuildOrder>
     <PaddingByte>0</PaddingByte>
@@ -81,6 +82,17 @@
         </SourceFile>
         <SourceFile>
             <Name>S1_6_03_SpriteAllScreen.bas</Name>
+            <PrgName />
+            <FileType>1</FileType>
+            <IncludeInBuild>True</IncludeInBuild>
+            <Regions />
+            <Breakpoints />
+            <Bookmarks />
+            <Topmost>False</Topmost>
+            <FileOpen>True</FileOpen>
+        </SourceFile>
+        <SourceFile>
+            <Name>S1_6_04_SpriteExpansion.bas</Name>
             <PrgName />
             <FileType>1</FileType>
             <IncludeInBuild>True</IncludeInBuild>
