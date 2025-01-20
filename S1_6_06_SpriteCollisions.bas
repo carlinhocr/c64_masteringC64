@@ -74,45 +74,46 @@
 740 rem if it checks the borders then reverse movement and
 750 rem and go towards center again
 760 if peek(v+31) = 4 or peek(v+31) = 1 then d = 1
-765 if peek(v+31) = 1 then gosub 1120
-770 rem check if there was a sprite vs sprite collisions
-780 rem value 5 is both sprite 2 = 4 and sprite 0 = 1
-790 rem reverse the movement as if it was a bump
-800 if peek(v+30) = 5 then d = -1
-810 goto 630
-820 rem step 1 -------------
-830 rem data part of step 1
-840 rem sprite data line by line 3 bytes for 21 lines
-850 rem each sprite is 24 columns by 21 rows
-860 rem so 21 rows of 3 bytes
-870 rem each row is:
-880 rem 128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1
-890 rem add the number if the sprite pixel is one (on)
-900 rem
-910 DATA 3,0,192
-920 DATA 3,129,192
-930 DATA 3,231,192
-940 DATA 1,231,128
-950 DATA 0,28,0
-960 DATA 7,219,224
-970 DATA 15,255,240
-980 DATA 31,255,248
-990 DATA 57,255,252
-1000 DATA 63,255,156
-1010 DATA 63,156,252
-1020 DATA 31,255,248
-1030 DATA 15,243,240
-1040 DATA 7,255,224
-1050 DATA 7,255,224
-1060 DATA 3,159,192
-1070 DATA 3,255,192
-1080 DATA 1,231,128
-1090 DATA 0,255,0
-1100 DATA 0,126,0
-1110 DATA 0,24,0
-1120 c=int(1024+(peek(v+1))/8+(peek(v+0))/8)
-1130 if peek (v+18)=1 then c=c+32
-1135 print(peek(v+1))
-1138 print(peek(v+0))
-1140 print "character position",c
-1160 return
+770 rem to check the character position of sprite 0 collisions
+780 rem if peek(v+31) = 1 then gosub 1120
+790 rem check if there was a sprite vs sprite collisions
+800 rem value 5 is both sprite 2 = 4 and sprite 0 = 1
+810 rem reverse the movement as if it was a bump
+820 if peek(v+30) = 5 then d = -1
+830 goto 630
+840 rem step 1 -------------
+850 rem data part of step 1
+860 rem sprite data line by line 3 bytes for 21 lines
+870 rem each sprite is 24 columns by 21 rows
+880 rem so 21 rows of 3 bytes
+890 rem each row is:
+900 rem 128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1,128+64+32+16+8+4+2+1
+910 rem add the number if the sprite pixel is one (on)
+920 rem
+930 DATA 3,0,192
+940 DATA 3,129,192
+950 DATA 3,231,192
+960 DATA 1,231,128
+970 DATA 0,28,0
+980 DATA 7,219,224
+990 DATA 15,255,240
+1000 DATA 31,255,248
+1010 DATA 57,255,252
+1020 DATA 63,255,156
+1030 DATA 63,156,252
+1040 DATA 31,255,248
+1050 DATA 15,243,240
+1060 DATA 7,255,224
+1070 DATA 7,255,224
+1080 DATA 3,159,192
+1090 DATA 3,255,192
+1100 DATA 1,231,128
+1110 DATA 0,255,0
+1120 DATA 0,126,0
+1130 DATA 0,24,0
+1140 c=int(1024+(peek(v+1))/8+(peek(v+0))/8)
+1150 if peek (v+18)=1 then c=c+32
+1160 print(peek(v+1))
+1170 print(peek(v+0))
+1180 print "character position",c
+1190 return
