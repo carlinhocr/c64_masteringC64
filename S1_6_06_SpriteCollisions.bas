@@ -46,7 +46,7 @@
 460 rem step 8 -------------
 470 rem print text to limit sprites borders
 480 for a=0to24
-490 print " 1                                   1 "
+490 print " 5                                   5 "
 500 next a
 510 rem step 9 -------------
 520 rem specify initila positions and activate sprites
@@ -74,7 +74,7 @@
 740 rem if it checks the borders then reverse movement and
 750 rem and go towards center again
 760 if peek(v+31) = 4 or peek(v+31) = 1 then d = 1
-765 rem if peek(v+31) = 1 then gosub 1120
+765 if peek(v+31) = 1 then gosub 1120
 770 rem check if there was a sprite vs sprite collisions
 780 rem value 5 is both sprite 2 = 4 and sprite 0 = 1
 790 rem reverse the movement as if it was a bump
@@ -112,5 +112,7 @@
 1110 DATA 0,24,0
 1120 c=int(1024+(peek(v+1))/8+(peek(v+0))/8)
 1130 if peek (v+18)=1 then c=c+32
-1140 print c
+1135 print(peek(v+1))
+1138 print(peek(v+0))
+1140 print "character position",c
 1160 return
