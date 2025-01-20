@@ -112,7 +112,8 @@
 1120 DATA 0,126,0
 1130 DATA 0,24,0
 1140 c=int(1024+(peek(v+1))/8+(peek(v+0))/8)
-1150 if peek (v+18)=1 then c=c+32
+1145 rem register 16 is most significant byte for X in case it went over 255
+1150 if peek (v+16)=1 then c=c+32
 1160 print(peek(v+1))
 1170 print(peek(v+0))
 1180 print c
