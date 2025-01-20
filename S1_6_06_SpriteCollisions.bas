@@ -41,8 +41,8 @@
 410 poke v + 41,10
 420 rem step 7 -------------
 430 rem expand sprites 0 and 2
-440 poke v + 29,(4+1)
-450 poke v + 23,(4+1)
+440 rem poke v + 29,(4+1)
+450 rem poke v + 23,(4+1)
 460 rem step 8 -------------
 470 rem print text to limit sprites borders
 480 for a=0to24
@@ -75,7 +75,7 @@
 750 rem and go towards center again
 760 if peek(v+31) = 4 or peek(v+31) = 1 then d = 1
 770 rem to check the character position of sprite 0 collisions
-780 rem if peek(v+31) = 1 then gosub 1120
+780 if peek(v+31) = 1 then gosub 1120
 790 rem check if there was a sprite vs sprite collisions
 800 rem value 5 is both sprite 2 = 4 and sprite 0 = 1
 810 rem reverse the movement as if it was a bump
@@ -115,5 +115,5 @@
 1150 if peek (v+18)=1 then c=c+32
 1160 print(peek(v+1))
 1170 print(peek(v+0))
-1180 print "character position",c
+1180 print c
 1190 return
