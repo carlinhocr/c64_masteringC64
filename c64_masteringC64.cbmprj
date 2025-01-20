@@ -50,6 +50,7 @@
         <FileName>S1_6_03_SpriteAllScreen.bas</FileName>
         <FileName>S1_6_04_SpriteExpansion.bas</FileName>
         <FileName>S1_6_05_SpritePriority.bas</FileName>
+        <FileName>S1_6_06_SpriteCollisions.bas</FileName>
     </BuildList>
     <DetermineBuildOrder>0</DetermineBuildOrder>
     <PaddingByte>0</PaddingByte>
@@ -112,6 +113,17 @@
             <Breakpoints />
             <Bookmarks />
             <Topmost>False</Topmost>
+            <FileOpen>True</FileOpen>
+        </SourceFile>
+        <SourceFile>
+            <Name>S1_6_06_SpriteCollisions.bas</Name>
+            <PrgName />
+            <FileType>1</FileType>
+            <IncludeInBuild>True</IncludeInBuild>
+            <Regions />
+            <Breakpoints />
+            <Bookmarks />
+            <Topmost>True</Topmost>
             <FileOpen>True</FileOpen>
         </SourceFile>
         <SourceFile>
